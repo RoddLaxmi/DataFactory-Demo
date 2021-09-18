@@ -1,0 +1,9 @@
+{
+	"name": "asdc",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4e00aeea-c68f-41d3-b818-d94f932cc439",
+		"tenantId": "74e6ae7d-72b2-416e-986a-81a89ae2080a"
+	}
+}
