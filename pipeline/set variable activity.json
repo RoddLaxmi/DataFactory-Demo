@@ -3,26 +3,6 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Copy data1",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "error",
-					"value": {
-						"value": "@string(activity('Copy data1').output.errors[0].message)",
-						"type": "Expression"
-					}
-				}
-			},
-			{
 				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
