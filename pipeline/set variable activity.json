@@ -84,12 +84,24 @@
 					},
 					"method": "POST",
 					"headers": {
-						"content-type": "application/json"
+						"Content-Type": "application/json"
 					},
 					"body": {
-						"value": "@string(activity('Copy data1').output.errors.message[0])",
+						"value": "{\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"EmailTo\": \"laxmi.rodd@mindtree.com\",\n\"ErrorMessage\": \"The ADF pipeline has crashed! Please check the logs.\",\n\"Subject\": \"An error has occurred!\",\n}\n",
 						"type": "Expression"
-					}
+					},
+					"linkedServices": [
+						{
+							"referenceName": "AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						}
+					],
+					"datasets": [
+						{
+							"referenceName": "DelimitedText1",
+							"type": "DatasetReference"
+						}
+					]
 				}
 			},
 			{
@@ -107,7 +119,7 @@
 				"typeProperties": {
 					"variableName": "error",
 					"value": {
-						"value": "@string(activity('Copy data1').output.errors.message[0])",
+						"value": "@string(activity('Copy data1').output.errors[0].message)",
 						"type": "Expression"
 					}
 				}
