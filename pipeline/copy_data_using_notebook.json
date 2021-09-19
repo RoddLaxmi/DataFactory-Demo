@@ -27,10 +27,6 @@
 			"status-fail": {
 				"type": "String",
 				"defaultValue": "fail"
-			},
-			"staus-success": {
-				"type": "String",
-				"defaultValue": "success"
 			}
 		},
 		"annotations": [],
