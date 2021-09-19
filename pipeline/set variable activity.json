@@ -84,7 +84,7 @@
 						"content-type": "application/json"
 					},
 					"body": {
-						"value": "{“DataFactoryName”: “@{pipeline().DataFactory}”,\n“PipelineName”: “@{pipeline().Pipeline}”,\n“Subject”: “An error has occurred!”,\n“ErrorMessage”: “The ADF pipeline has crashed! Please check the logs.”,\n“EmailTo”: “laxmi.rodd@mindtree.com”\n}",
+						"value": "@string(replace(activity('Copy data1').errors[0].Message, '\"', ''''))",
 						"type": "Expression"
 					}
 				}
