@@ -23,6 +23,16 @@
 				}
 			}
 		],
+		"variables": {
+			"status-fail": {
+				"type": "String",
+				"defaultValue": "fail"
+			},
+			"staus-success": {
+				"type": "String",
+				"defaultValue": "success"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2021-09-18T09:43:15Z"
 	},
